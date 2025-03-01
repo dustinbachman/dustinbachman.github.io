@@ -1,0 +1,109 @@
+body {
+    background-color: grey;
+    align-items: center;
+    margin: auto;
+}
+
+
+#playersTitle {
+    display: flex;
+    flex-direction: column;
+    gap: auto;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.wonRed {
+    text-decoration: underline;
+    animation: colorChangeRed 1s infinite alternate;
+}
+
+@keyframes colorChangeRed {
+    0% { color: red; }
+    100% { color: darkred; }
+}
+
+.wonYellow {
+    text-decoration: underline;
+    animation: colorChangeYellow 1s infinite alternate;
+}
+
+@keyframes colorChangeYellow {
+    0% { color: yellow; }
+    100% { color: orange; }
+}
+
+#title {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: white;
+    font-family: "Sigmar", sans-serif;
+    text-shadow: 4px 4px 2px #373737;
+}
+
+
+#player1 {
+    color: red;
+    text-shadow: 2px 2px 2px #373737;
+}
+
+#player2 {
+    color: yellow;
+    text-shadow: 2px 2px 2px #373737;
+}
+
+#players {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Dangrek", sans-serif;
+    display: flex;
+    min-width: 100%;
+    font-size: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    visibility: hidden;
+}
+
+.currentlyPlaying {
+    visibility: visible;
+}
+
+#refreshButton {
+    margin: auto;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 700px;
+    height: 600px;
+    background-color: blue;
+    align-items: center;
+    margin: auto;
+    box-shadow: -3px -4px 1px 5px #00008B inset;
+    border-radius: 3%;
+}
+
+.cell {
+    border-radius: 50%;
+    margin: auto;
+    width:70px;
+    height:70px;
+    background-color:grey;
+    cursor: pointer;
+    box-shadow: 3px 4px 1px 5px #00008B inset;
+}
+
+.redToken {
+    background-color:red;
+    box-shadow: 2px 2px 1px 2px darkred inset;
+}
+
+.yellowToken {
+    background-color: yellow;
+    box-shadow: 2px 2px 1px 2px orange inset;
+}
